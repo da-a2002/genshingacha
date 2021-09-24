@@ -58,6 +58,9 @@ async def set_pool(bot, ev: CQEvent):
         name = '角色'
     elif name in ('武器', '武器池', '武器up', '武器up池'):
         name = '武器'
+    else:
+        await bot.send(ev, f'未找到{name}', at_sender=True)
+        return
     gid = str(ev.group_id)
     _group_pool[gid] = name
     dump_pool_config()
@@ -212,7 +215,7 @@ async def gacha_info(bot, ev):
     data_all=[data1,data2,data3,data4]
     await bot.send_group_forward_msg(group_id=ev['group_id'], messages=data_all)
 
-@sv.on_rex('武器定轨')
+@sv.on_prefix(('武器定轨', '定轨'))
 async def arm_star(bot, ev):
     name = util.normalize_str(ev.message.extract_plain_text())
     gid = str(ev['group_id'])
