@@ -114,7 +114,7 @@ async def gacha_ten(bot, ev):
     await bot.finish(ev,resultmes, at_sender=False)
 
 @sv.on_rex('原神单抽')
-async def gacha_ten(bot, ev):
+async def gacha_one(bot, ev):
     gid = str(ev['group_id'])
     uid = str(ev['user_id'])
     if not gid in _pool_config_file:
