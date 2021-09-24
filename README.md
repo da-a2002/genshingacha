@@ -1,4 +1,3 @@
-# genshingacha
 本插件为图片版原神抽卡，由松坂砂糖大佬提供支持，代码有点烂请见谅
 # 配置方法
 在HoshinoBot的插件目录modules下clone本项目 git clone https://github.com/da-a2002/genshingacha.git
