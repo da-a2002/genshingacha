@@ -26,7 +26,7 @@ async def bangzhu(bot, ev):
     await bot.send(ev, sv_help, at_sender=True)
 
 #授权码请自行获取
-authcode = '114514'
+authcode = ''
 
 _pool_config_file = os.path.expanduser('~/.hoshino/genshin_group_pool_config.json')
 _group_pool = {}
